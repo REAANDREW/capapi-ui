@@ -2,6 +2,7 @@ var express = require('express')
 var exphbs = require('express-handlebars');
 
 var app = express()
+app.use(express.static('public'))
 app.engine('.hbs.html', exphbs({defaultLayout: 'layout', extname: '.hbs.html'}));
 app.set('view engine', '.hbs.html');
 
